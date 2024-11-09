@@ -1,7 +1,7 @@
 # JSP Banking Portal
 
 ## Description
-This project is a web-based banking portal application built using JSP (JavaServer Pages). The portal allows users to register, log in, and manage their banking information, including account details and transaction history. 
+The JSP Banking Portal is a secure, web-based application designed to offer users a seamless experience for managing their banking accounts. Built using JavaServer Pages (JSP), this portal enables users to perform essential banking operations such as registration, login, and account management. With added security features like CAPTCHA verification, users can safely interact with their personal banking data, including profile information and transaction history.
 
 **Password Security:** Passwords are securely hashed using the SHA-256 cryptographic technique before storing them in the database, ensuring that user credentials are protected.
 
