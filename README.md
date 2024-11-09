@@ -8,8 +8,8 @@ This project is a web-based banking portal application built using JSP (JavaServ
 ### Features
 - **User Registration:** Secure registration form to create new accounts.
 - **Login:** User authentication with CAPTCHA for added security.
-- **Profile Information:** Display of information after login.
-- **Banking Operations:** (Optional depending on your implementation)
+- **Profile Information:** Display of informations after login.
+- **Banking Operations:** Manage accounts and perform banking transactions such as deposit, withdrawal, and balance inquiry.
 
 ## Technologies Used
 - **Frontend:** JSP, HTML, CSS
@@ -33,4 +33,4 @@ This project is a web-based banking portal application built using JSP (JavaServ
 4. Build and deploy using your preferred server (Tomcat, for example).
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
