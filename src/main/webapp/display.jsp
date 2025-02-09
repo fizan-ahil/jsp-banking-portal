@@ -21,7 +21,7 @@
 
         .header {
             text-align: center;
-            background-color: #2E8B57; /* Green */
+            background-color: #2E8B57;
             color: white;
             padding: 40px 20px;
             border-radius: 8px;
@@ -34,7 +34,7 @@
         .header p {
             font-size: 1.2em;
             margin: 0;
-            color: black;
+            color: white;
         }
         .content {
             margin: 40px 0;
@@ -82,7 +82,7 @@
 <div class="container">
     <!-- Header Section -->
     <div class="header">
-        <h1>Welcome to ABC Bank of India</h1>
+        <h1>Welcome to BANK OF INDIA</h1>
         <p>Your trusted partner for financial growth and success</p>
     </div>
 
@@ -90,7 +90,7 @@
     <div class="content">
         <div class="paragraph">
             <h2>About Us</h2>
-            <p>ABC Bank of India has been at the forefront of providing innovative banking solutions for over 50 years. From personal savings accounts to business loans, we strive to meet the financial needs of our customers with excellence.</p>
+            <p>BANK OF INDIA has been at the forefront of providing innovative banking solutions for over 50 years. From personal savings accounts to business loans, we strive to meet the financial needs of our customers with excellence.</p>
         </div>
 
         <div class="paragraph">
@@ -105,18 +105,18 @@
 
         <div class="paragraph">
             <h2>Why Choose Us?</h2>
-            <p>With over 500 branches nationwide, ABC Bank of India offers unparalleled accessibility and a wide range of services tailored to meet every need. Our seamless digital banking experience ensures you can manage your finances anytime, anywhere.</p>
+            <p>With over 500 branches nationwide, BANK OF INDIA offers unparalleled accessibility and a wide range of services tailored to meet every need. Our seamless digital banking experience ensures you can manage your finances anytime, anywhere.</p>
         </div>
 
         <!-- Call to Action Button -->
         <div class="paragraph" style="text-align: center;">
-            <a href="services.jsp" class="button">Explore Our Services</a>
+            <a href="service.jsp" class="button">Explore Our Services</a>
         </div>
     </div>
 
     <!-- Footer Section -->
     <div class="footer">
-        <p> &copy; ABC Bank of India | All Rights Reserved</p>
+        <p> &copy; BANK OF INDIA | All Rights Reserved</p>
     </div>
 </div>
 

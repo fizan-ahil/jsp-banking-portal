@@ -30,10 +30,7 @@
             text-align: center;
             color: #333333;
             margin-bottom: 1.5rem;
-            margin-top: 5rem;
             font-size: 1.5rem;
-            line-height: 1.2;
-            word-wrap: break-word;
         }
         label {
             display: block;
@@ -95,28 +92,42 @@
             String username = "root";
             String password = "Gulzar@kpb1";
 
+            Connection conn = null;
+            PreparedStatement pstmt1 = null;
+            PreparedStatement pstmt2 = null;
+
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
+                conn = DriverManager.getConnection(url, username, password);
+                conn.setAutoCommit(false); // Start transaction
 
-                Connection conn = DriverManager.getConnection(url, username, password);
+                // Insert into registration table
+                pstmt1 = conn.prepareStatement("INSERT INTO registration (name, account_number, account_type, branch, city, mobile_number) VALUES (?, ?, ?, ?, ?, ?)");
+                pstmt1.setString(1, name);
+                pstmt1.setString(2, accountNumber);
+                pstmt1.setString(3, accountType);
+                pstmt1.setString(4, branch);
+                pstmt1.setString(5, city);
+                pstmt1.setString(6, mobileNumber);
+                pstmt1.executeUpdate();
 
-                PreparedStatement pstmt = conn.prepareStatement("INSERT INTO registration (name, account_number, account_type, branch, city, mobile_number) VALUES (?, ?, ?, ?, ?, ?)");
-                pstmt.setString(1, name);
-                pstmt.setString(2, accountNumber);
-                pstmt.setString(3, accountType);
-                pstmt.setString(4, branch);
-                pstmt.setString(5, city);
-                pstmt.setString(6, mobileNumber);
+                // Insert into accounts table with initial balance 0
+                pstmt2 = conn.prepareStatement("INSERT INTO accounts (account_number, account_holder_name, balance) VALUES (?, ?, ?)");
+                pstmt2.setString(1, accountNumber);
+                pstmt2.setString(2, name);
+                pstmt2.setDouble(3, 0.0);
+                pstmt2.executeUpdate();
 
-                pstmt.executeUpdate();
-
-                pstmt.close();
-                conn.close();
+                conn.commit(); // Commit transaction
 
                 response.sendRedirect("creation.jsp");
-
             } catch (Exception e) {
+                if (conn != null) conn.rollback(); // Rollback transaction on error
                 out.println("Error: " + e.getMessage());
+            } finally {
+                if (pstmt1 != null) pstmt1.close();
+                if (pstmt2 != null) pstmt2.close();
+                if (conn != null) conn.close();
             }
         }
     %>

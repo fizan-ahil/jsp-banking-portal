@@ -147,7 +147,7 @@
 </head>
 <body>
     <div class="login-container">
-        <h1>ABC BANK OF INDIA</h1>
+        <h1>BANK OF INDIA</h1>
 
         <% if (showError) { %>
             <div class="error-message">
