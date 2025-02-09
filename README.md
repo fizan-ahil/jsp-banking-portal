@@ -75,4 +75,4 @@ This project demonstrates **secure and scalable web application development**, p
 
 ## 📜 License
 
-This project is licensed under the **MIT License** – feel free to modify and use it.
+This project is licensed under the **MIT License**
