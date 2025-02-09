@@ -1,4 +1,4 @@
-# 🌐 Secure Banking Platform 🌐
+# 🌐 Secure Digital Banking Platform 🌐
 
 A **secure and user-centric digital banking platform** developed using **JSP and MySQL**, designed to facilitate seamless banking transactions with **robust security measures**. This project enables users to **register, log in, and perform essential financial operations** while ensuring **data integrity, security, and scalability**.
 
