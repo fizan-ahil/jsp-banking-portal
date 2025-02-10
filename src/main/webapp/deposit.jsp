@@ -34,8 +34,8 @@
             margin-bottom: 8px;
             text-align: left;
         }
-        input[type="text"], input[type="number"], input[type="submit"] {
-            width: 100%;
+        input[type="text"], input[type="number"] {
+            width: calc(100% - 22px);
             padding: 10px;
             margin: 8px 0;
             border: 1px solid #ccc;
@@ -44,6 +44,12 @@
         }
         /* Blue Submit Button */
         input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
             background: #007bff; /* Blue */
             color: white;
             border: none;

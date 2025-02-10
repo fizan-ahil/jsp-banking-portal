@@ -35,7 +35,7 @@
             text-align: left;
         }
         input[type="text"], input[type="number"], input[type="submit"] {
-            width: 100%;
+            width: calc(100% - 22px);
             padding: 10px;
             margin: 8px 0;
             border: 1px solid #ccc;
@@ -44,6 +44,12 @@
         }
         /* Red Submit Button */
         input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
             background: #dc3545; /* Red */
             color: white;
             border: none;

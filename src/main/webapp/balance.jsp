@@ -34,8 +34,8 @@
             margin-bottom: 8px;
             text-align: left;
         }
-        input[type="text"], input[type="submit"] {
-            width: 100%;
+        input[type="text"] {
+            width: calc(100% - 22px);
             padding: 10px;
             margin: 8px 0;
             border: 1px solid #ccc;
@@ -43,6 +43,12 @@
             font-size: 16px;
         }
         input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
             background: #28a745;
             color: white;
             border: none;
