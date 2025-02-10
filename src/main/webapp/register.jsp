@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>User Registration</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -17,23 +17,29 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            padding: 40px;
         }
         .registration-container {
             width: 100%;
-            max-width: 500px;
+            max-width: 600px;
             padding: 2rem;
             background-color: #ffffff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 8px;
+            text-align: center;
         }
         h1 {
-            text-align: center;
             color: #333333;
+            font-size: 1.75rem;
             margin-bottom: 1.5rem;
-            font-size: 1.5rem;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         label {
             display: block;
+            text-align: left;
             color: #555555;
             margin-bottom: 0.5rem;
             font-weight: bold;
@@ -45,6 +51,7 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 1rem;
+            box-sizing: border-box;
         }
         input[type="submit"] {
             width: 100%;
@@ -77,7 +84,7 @@
 <body>
 
 <div class="registration-container">
-    <h1>User Registration - New Account</h1>
+    <h1>User Registration - Create New Account</h1>
 
     <%
         if (request.getMethod().equals("POST")) {
@@ -123,7 +130,7 @@
                 response.sendRedirect("creation.jsp");
             } catch (Exception e) {
                 if (conn != null) conn.rollback(); // Rollback transaction on error
-                out.println("Error: " + e.getMessage());
+                out.println("<div style='color: red; font-weight: bold;'>Error: " + e.getMessage() + "</div>");
             } finally {
                 if (pstmt1 != null) pstmt1.close();
                 if (pstmt2 != null) pstmt2.close();
